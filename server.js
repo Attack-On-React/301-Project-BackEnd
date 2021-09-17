@@ -11,6 +11,8 @@ server.use(express.json());
 
 
 server.get('/',Homehandler)
+// https://localhost:/delete/:id?email=${email}
+server.delete('/delete/:id',handleDelete)
 
 
 
@@ -19,6 +21,26 @@ server.get('/',Homehandler)
 function Homehandler(res,req){
     res.send("HomePage");
 }
+
+function handleDelete(res,req){
+    const id = req.params.id;
+    const email = req.query.email;
+    .deleteOne({:id},(err,result)=>{
+        .find({:email},(err,result)=>{
+           if(err){
+               console.log("Error in handleDelete");
+           } else {
+               res.send(result);
+           }
+        })
+
+        
+
+    })
+    }
+       
+
+
 
 
 
