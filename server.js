@@ -8,12 +8,10 @@ server.use(cors());
 const PORT=process.env.PORT;
 server.use(express.json());
 
-// Nedal & Bashar update method
 let BookModel;
 const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));
-
 
 async function main() {
   await mongoose.connect(process.env.MONGO_URL);
@@ -36,17 +34,30 @@ async function getData() {
 //   await book1.save()
 
 }
-
-// http://localhost:3010/updateInfo/:id
 server.get('/',Homehandler)
+// http://localhost:3010/updateInfo/:id
 server.put('/updateInfo/:id' ,updateHandler)
 server.post('/course', addCourse);
+// https://localhost:/delete/:id?email=${email}
+server.delete('/delete/:id',handleDelete)
 
 function Homehandler(res,req){
     res.send("HomePage");
 }
 
-
+function handleDelete(res,req){
+    const id = req.params.id;
+    const email = req.query.email;
+    .deleteOne({:id},(err,result)=>{
+        .find({:email},(err,result)=>{
+           if(err){
+               console.log("Error in handleDelete");
+           } else {
+               res.send(result);
+           }
+        })
+    })
+    }
 async function addCourse(req, res) {
     console.log(req.body);
     const courseTitle = req.body.courseTitle;
@@ -71,18 +82,6 @@ async function addCourse(req, res) {
     })
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 async function updateHandler(req, res)
  {
   const bookId = req.params.id
