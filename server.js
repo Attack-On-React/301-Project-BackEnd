@@ -36,16 +36,16 @@ async function getData() {
 }
 server.get('/',Homehandler)
 // http://localhost:3010/updateInfo/:id
-server.put('/updateInfo/:id' ,updateHandler)
-server.post('/course', addCourse);
+server.put('/updatecourse/:id' ,updateHandler)
+server.post('/addcourse', addHandler);
 // https://localhost:/delete/:id?email=${email}
-server.delete('/delete/:id',handleDelete)
+server.delete('/deletecourse/:id',deleteHandler)
 
 function Homehandler(res,req){
     res.send("HomePage");
 }
 
-function handleDelete(res,req){
+function deleteHandler(res,req){
     const id = req.params.id;
     const email = req.query.email;
     .deleteOne({:id},(err,result)=>{
@@ -58,7 +58,7 @@ function handleDelete(res,req){
         })
     })
     }
-async function addCourse(req, res) {
+async function addHandler(req, res) {
     console.log(req.body);
     const courseTitle = req.body.courseTitle;
     const courseDescription = req.body.courseDescription;
