@@ -35,7 +35,7 @@ async function getData() {
 
 }
 
-// http://localhost:3010/updateInfo
+// http://localhost:3010/updateInfo/:id
 server.get('/',Homehandler)
 server.put('/updateInfo/:id' ,updateHandler)
 
