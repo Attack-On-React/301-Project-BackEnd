@@ -7,72 +7,87 @@ const server=express();
 server.use(cors());
 const PORT=process.env.PORT;
 server.use(express.json());
+const coursesData=require('./data.json')
 
-let BookModel;
+let CourseModel;
 const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect(process.env.MONGO_URL);
+  // await mongoose.connect(process.env.MONGO_URL);
+  await mongoose.connect('mongodb://localhost:27017/courses');
 
-  const bookSchema = new mongoose.Schema({
-    title: String,
+  const courseSchema = new mongoose.Schema({
+    courseName: String,
+    urlimg: String,
+    unv: String,
+    unvimg: String,
     description: String,
-    status: String,
-    url: String,
+    price: String,
     email: String
   });
-  BookModel = mongoose.model('Books', bookSchema);
+  CourseModel = mongoose.model('Courses', courseSchema);
 
 
-//   getData()
+  // getData()
 }
 
-async function getData() {
+// async function getData() {
+// let DataArray=coursesData.map(item=>{
+//   let sample=new CourseModel({
+//     courseName: item.courseName,
+//     urlimg: item.urlimg,
+//     unv:item.unv,
+//     unvimg:item.unvimg,
+//     description:item.description,
+//     price:item.price,
+//   })
+// })
+
 
 //   await book1.save()
 
-}
-server.get('/',Homehandler)
+// }
+// http://localhost:3010/coursesData
+server.get('/coursesData',getDataHandler)
+// server.get('/',Homehandler)
 // http://localhost:3010/updateInfo/:id
-server.put('/updatecourse/:id' ,updateHandler)
+// server.put('/updatecourse/:id' ,updateHandler)
 server.post('/addcourse', addHandler);
-// https://localhost:/delete/:id?email=${email}
-server.delete('/deletecourse/:id',deleteHandler)
+// http://localhost:3010/delete/:id?email=${email}
+// server.delete('/deletecourse/:id',deleteHandler)
 
-function Homehandler(res,req){
-    res.send("HomePage");
-}
+// function Homehandler(req,res){
+//     res.send("HomePage");
+// }
 
-function deleteHandler(res,req){
-    const id = req.params.id;
-    const email = req.query.email;
-    .deleteOne({:id},(err,result)=>{
-        .find({:email},(err,result)=>{
-           if(err){
-               console.log("Error in handleDelete");
-           } else {
-               res.send(result);
-           }
-        })
+function getDataHandler(req,res){
+    const gettingData=coursesData.result.map(item=>{
+      return item;
     })
-    }
+    res.send(gettingData)
+}
+console.log(coursesData.result);
+// function deleteHandler(req,res){
+//     const id = req.params.id;
+//     const email = req.query.email;
+//     .deleteOne({:id},(err,result)=>{
+//         .find({:email},(err,result)=>{
+//            if(err){
+//                console.log("Error in handleDelete");
+//            } else {
+//                res.send(result);
+//            }
+//         })
+//     })
+//     }
 async function addHandler(req, res) {
     console.log(req.body);
-    const courseTitle = req.body.courseTitle;
-    const courseDescription = req.body.courseDescription;
-    const coursePrice = req.body.coursePrice;
-    const courseEmail = req.body.courseEmail;
-    // const {courseTitle, courseDescription, coursePrice,courseEmail} = req.body;
-    await Modelbook.create({
-        courseTitle: courseTitle,
-        courseDescription: courseDescription,
-        coursePrice: coursePrice,
-        courseEmail: courseEmail
-    });
+const{courseName,urlimg,unv,unvimg,description,price,email}=req.body
+    await CourseModel.create({courseName,urlimg,unv,unvimg,description,price,email});
 
-    ModelCourse.find({ ownerEmail: courseEmail }, (err, result) => {
+    ModelCourse.find({ email: email }, (err, result) => {
         if (err) {
             console.log(err);
         }
@@ -82,26 +97,26 @@ async function addHandler(req, res) {
     })
 
 }
-async function updateHandler(req, res)
- {
-  const bookId = req.params.id
-  const {title,description,status,email} = req.body
-  BookModel.findByIdAndUpdate(bookId,{title,description,status}, (error, result) => 
-  {
-    BookModel.find({ email: email }, (error, result) => 
-    {
-      if (error) 
-      {
-        console.log(error);
-      }
-      else
-       {
-        res.send(result)
-        console.log(result);
-      }
-    })
-  })
-}
+// async function updateHandler(req, res)
+//  {
+//   const bookId = req.params.id
+//   const {title,description,status,email} = req.body
+//   BookModel.findByIdAndUpdate(bookId,{title,description,status}, (error, result) => 
+//   {
+//     BookModel.find({ email: email }, (error, result) => 
+//     {
+//       if (error) 
+//       {
+//         console.log(error);
+//       }
+//       else
+//        {
+//         res.send(result)
+//         console.log(result);
+//       }
+//     })
+//   })
+// }
 
 
 server.listen(PORT, () => {
