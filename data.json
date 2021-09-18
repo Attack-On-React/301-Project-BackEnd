@@ -1,0 +1,75 @@
+{"result":[
+    {
+        "courseName":"Indtroduction to computer Science and Programing ",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/956319ec-8665-4039-8bc6-32c9a9aea5e9-885268c71902.small.jpg",
+        "unv":"MITx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/2a73d2ce-c34a-4e08-8223-83bca9d2f01d-2cc8854c6fee.png",
+        "description":"This course is the first of a two-course sequence: Introduction to Computer Science and Programming Using Python, and Introduction to Computational Thinking and Data Science. Together, they are designed to help people with no prior exposure to computer science or programming learn to think computationally and write programs to tackle useful problems. Some of the people taking the two courses will use them as a stepping stone to more advanced computer science courses, but for many it will be their first and last computer science courses. This run features lecture videos, lecture exercises, and problem sets using Python 3.5. Even if you previously took the course with Python 2.7, you will be able to easily transition to Python 3.5 in future courses, or enroll now to refresh your learning. Since these courses may be the only formal computer science courses many of the students take, we have chosen to focus on breadth rather than depth. The goal is to provide students with a brief introduction to many topics so they will have an idea of what is possible when they need to think about how to use computation to accomplish some goal later in their career. That said, they are not 'computation appreciation' courses. They are challenging and rigorous courses in which the students spend a lot of time and effort learning to bend the computer to their will.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Indroduction to linux",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/5a631d1c-cb20-4cfc-9b49-1cc9c8fc981e-5949e438d0ed.small.png",
+        "unv":"LinuxFoundationX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/4d254841-5cc9-4174-a28d-5b4f823c0122-51c34231df61.png",
+        "description":"Develop a good working knowledge of Linux using both the graphical interface and command line, covering the major Linux distribution families.Linux powers 100% of the world’s supercomputers, most of the servers powering the Internet, the majority of financial trades worldwide and over two billion Android devices. In short, Linux is everywhere. It appears in many different architectures, from mainframes to server to desktop to mobile and on a staggeringly wide variety of hardware.Moreover, 80 percent of hiring managers reported that they will prioritize hiring Linux talent relative to other skills areas, and 47 percent of hiring managers say they’re more likely to hire a candidate with Linux certification.This course explores the various tools and techniques commonly used by Linux system administrators and end users to achieve their day-to-day work in a Linux environment. It is designed for experienced computer users who have limited or no previous exposure to Linux, whether they are working in an individual or Enterprise environment.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Data Science: R Basics",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/91f52ef3-fa3f-4934-9d19-8d5a32635cd4-d99e27f09d19.small.jpg",
+        "unv":"HarvardX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png",
+        "description":"The first in our Professional Certificate Program in Data Science, this course will introduce you to the basics of R programming. You can better retain R when you learn it to solve a specific problem, so you'll use a real-world dataset about crime in the United States. You will learn the R skills needed to answer essential questions about differences in crime across the different states. We'll cover R's functions and data types, then tackle how to operate on vectors and when to use advanced functions like sorting. You'll learn how to apply general programming features like 'if-else,' and 'for loop' commands, and how to wrangle, analyze and visualize data.Rather than covering every R skill you might need, you'll build a strong foundation to prepare you for the more in-depth courses later in the series, where we cover concepts like probability, inference, regression, and machine learning. We help you develop a skill set that includes R programming, data wrangling with dplyr, data visualization with ggplot2, file organization with UNIX/Linux, version control with git and GitHub, and reproducible document preparation with RStudio.The demand for skilled data science practitioners is rapidly growing, and this series prepares you to tackle real-world data analysis challenges.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"introduction to Programming in C++",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/62ed92c9-22b6-43a6-a755-0f296d0f64ce-8b3c8aa8f0af.small.jpeg",
+        "unv":"NYUx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/dc6d25de-0dac-43e6-a915-e362bf8b4403-917c4e000b69.png",
+        "description":"This is the 1st course in the intermediate, undergraduate-level offering that makes up the larger Programming and Data Structures MicroBachelors program. We recommend taking them in order, unless you have a background in these areas already and feel comfortable skipping ahead. ",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Python for Data Science",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/b3c02aea-cbf6-4fc4-a730-0433860e2a35-bb25bbe40de7.small.jpg",
+        "unv":"UcSanDiegoX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/c7f335bb-f97c-4472-af09-65ae60197005-7d797d964ddb.png",
+        "description":"In the information age, data is all around us. Within this data are answers to compelling questions across many societal domains (politics, business, science, etc.). But if you had access to a large dataset, would you be able to find the answers you seek? This course, part of the Data Science MicroMasters program, will introduce you to a collection of powerful, open-source, tools needed to analyze data and to conduct data science. After completing this course, you'll be able to find answers within large datasets by using python tools to import data, explore it, analyze it, learn from it, visualize it, and ultimately generate easily sharable reports. By learning these skills, you'll also become a member of a world-wide community which seeks to build data science tools, explore public datasets, and discuss evidence-based findings. Last but not least, this course will provide you with the foundation you need to succeed in later courses in the Data Science MicroMasters program.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Creative Coding",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/1f5aba77-885b-4c88-b2b1-6211033edf39-044787ad0f8d.small.jpg",
+        "unv":"NYUx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/dc6d25de-0dac-43e6-a915-e362bf8b4403-917c4e000b69.png",
+        "description":"In Creative Coding, students learn to design and create media using object-oriented programming as a medium for design, art, and games. With a strong focus on creating interactive experiences for the web, the course moves past the sequential problem solving found in typical beginner programming and coding courses, so that designers and creatives can apply programming concepts to work in a variety of media, such as 2D graphics, animation, image and video processing. By the end of this course, students will be able to read and write javascript for creative and design applications. Whether you are a graphic designer, UX/UI designer, web designer, or accessibility designer, this course will arm you with fundamental coding skills using javascript and other languages as a method of expression.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Enterprise Data Managment",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/d56e7ceb-e866-4007-b915-dcc34c7ef8ee-0337b9efe55e.small.jpeg",
+        "unv":"IUx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/8946fb40-f288-4e05-9275-9e9b4689bda8-e58c545e2296.png",
+        "description":"High-quality information is the key to successful management of businesses. Despite the large quantity of data that is collected by organizations, managers struggle to obtain information that helps them make decisions. While operational processing systems help capture, store, and manipulate data to support day-to-day operations of organizations, reconciled systems -- sometimes referred to as data warehouses or business intelligence (BI) systems -- support the analysis of data, thus, enabling decision making. With the advent of big data systems, organizations have turned toenterprise data management frameworks to manage and gain insights from the vast amount of data collected. While storage costs themselves are relatively affordable, the bigger challenge has been finding an appropriate mechanism to manage the data as many technologies (e.g., relational databases, data warehouses) have limitations on the amount of data that can be stored. This course focuses on realizing the business advantage and business potential of operational, reconciled, and big data systems as well as data assets in supporting enterprise data management strategies and enterprise data analytics. Verified Learners will need to purchase a textbook in order to successfully complete the course. See the FAQ for details.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Digital Marketing Strategy",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/5e2ea83a-3ec3-4461-86ab-94d17ab0c3f0-48921b894e85.small.jpeg",
+        "unv":"EdinburghX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/bc823bd7-b910-4e23-a5fd-ac7283f02c1e-8a1471d5bf21.png",
+        "description":"Digital marketing is a major component of marketing today. This course will equip you with practical digital marketing skills to help you build your business. You will learn about the digital marketing landscape and how digital technologies can be used to help businesses identify opportunities and minimize risk. Case studies will be used to demonstrate how digital supports business objectives, and how it can set enterprise apart. It’s essential to gain a greater understanding of your target customer so we’ll teach you how to create a user persona which will help you identify the different demographics, behaviours and needs of your consumers online. Finally, you will learn how to apply your new skills to future marketing activities by developing your own unique digital marketing strategy capable of outperforming competitors and achieving a set of business objectives.",
+        "price":"50$ for 1 month subscription"
+        
+    },{
+        "courseName":"Human-Computer Interaction",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/4d3258fc-bcee-4c37-bf7a-9f22524bf4a7-050cbdf42229.small.png",
+        "unv":"GTx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/8537d31f-01b4-40fd-b652-e17b38eefe41-7956b2a3cd04.png",
+        "description":"This course takes you through the first eight lessons of CS6750: Human-Computer Interaction as taught in the Georgia Tech Online Master of Science in Computer Science program. In this course, you’ll take the first steps toward being a solid HCI practitioner and researcher. You’ll learn the fundamentals of how HCI relates to fields like user experience design, user interface design, human factors engineering, and psychology. You’ll also learn how human-computer interaction has influence across application domains like healthcare and education; technology development like virtual and augmented reality; and broader ideas like context-sensitive computing and information visualization. You’ll then dive into the fundamentals of human-computer interaction. You’ll learn three views of the user’s role in interface design: the behaviorist ‘processor’ view, the cognitivist ‘predictor’ view, and the situationist ‘participant’ view. You’ll discover how these different views of the user’s role affect the scope we use to evaluate interaction. These perspectives will be crucial as you move forward in designing interfaces to ensure you’re considering what goes on inside the user’s head, as well as in the environment around them. You’ll then learn the gulfs of execution and evaluation, which determine how easily the user can accomplish their goals in a system and how well they can understand the results of their actions. All of user interface design can be seen as taking steps to bridge these gulfs. You’ll also investigate the notion of direct manipulation, which shortens the distance between the user and the objects they are manipulating in the interface. With these tools, you’ll be well-equipped to start designing effective interfaces. You’ll then take a deeper dive into what humans are even capable of accomplishing. You’ll learn the limitations of human sensing and memory and how we must be aware of the cognitive load we introduce on the user while using our interfaces. Cognitive load can have an enormous impact on a user’s satisfaction with an interface, and must be kept in mind as you begin your career as a designer.",
+        "price":"50$ for 1 month subscription"
+        
+    }
+]}
