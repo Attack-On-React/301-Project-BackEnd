@@ -27,7 +27,7 @@ async function main() {
     price: String,
     email: String
   });
-  CourseModel = mongoose.model('Courses', courseSchema);
+  CourseModel = mongoose.model('courses', courseSchema);
 
 
   // getData()
@@ -69,6 +69,7 @@ function getDataHandler(req,res){
     res.send(gettingData)
 }
 console.log(coursesData.result);
+
 // function deleteHandler(req,res){
 //     const id = req.params.id;
 //     const email = req.query.email;
