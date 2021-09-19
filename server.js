@@ -30,12 +30,12 @@ async function main() {
   CourseModel = mongoose.model('courses', courseSchema);
 
 
-  // getData()
+//   getData()
 }
-
+// let sample;
 // async function getData() {
-// let DataArray=coursesData.map(item=>{
-//   let sample=new CourseModel({
+//    coursesData.result.map(item=>{
+//   sample=new CourseModel({
 //     courseName: item.courseName,
 //     urlimg: item.urlimg,
 //     unv:item.unv,
@@ -44,9 +44,7 @@ async function main() {
 //     price:item.price,
 //   })
 // })
-
-
-//   await book1.save()
+// await sample.save()
 
 // }
 // http://localhost:3010/coursesData
@@ -54,6 +52,7 @@ server.get('/coursesData',getDataHandler)
 // server.get('/',Homehandler)
 // http://localhost:3010/updateInfo/:id
 // server.put('/updatecourse/:id' ,updateHandler)
+// http://localhost:3010/addcourse
 server.post('/addcourse', addHandler);
 // http://localhost:3010/delete/:id?email=${email}
 // server.delete('/deletecourse/:id',deleteHandler)
@@ -86,9 +85,18 @@ console.log(coursesData.result);
 async function addHandler(req, res) {
     console.log(req.body);
 const{courseName,urlimg,unv,unvimg,description,price,email}=req.body
-    await CourseModel.create({courseName,urlimg,unv,unvimg,description,price,email});
 
-    ModelCourse.find({ email: email }, (err, result) => {
+    await CourseModel.create({
+        courseName:courseName,
+        urlimg:urlimg,
+        unv:unv,
+        unvimg:unvimg,
+        description:description,
+        price:price,
+        email:email
+    });
+
+    CourseModel.find({ email: email }, (err, result) => {
         if (err) {
             console.log(err);
         }
