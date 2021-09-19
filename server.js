@@ -50,16 +50,30 @@ async function main() {
 // http://localhost:3010/coursesData
 server.get('/coursesData',getDataHandler)
 // server.get('/',Homehandler)
-// http://localhost:3010/updateInfo/:id
-// server.put('/updatecourse/:id' ,updateHandler)
+// http://localhost:3010/updatecourse/:id
+server.put('/updatecourse/:id' ,updateHandler)
 // http://localhost:3010/addcourse
 server.post('/addcourse', addHandler);
 // http://localhost:3010/delete/:id?email=${email}
 // server.delete('/deletecourse/:id',deleteHandler)
+// http://localhost:3010/profiledata?email=${email}
+server.get('/profiledata',profileDataHandler)
 
 // function Homehandler(req,res){
 //     res.send("HomePage");
 // }
+
+function profileDataHandler(req,res){
+    const email=req.query.email
+    CourseModel.find({email:email},(err,result)=>{
+        if(err){
+            console.log(err);
+        }
+        else{
+            res.send(result)
+        }
+    })
+}
 
 function getDataHandler(req,res){
     const gettingData=coursesData.result.map(item=>{
@@ -106,26 +120,26 @@ const{courseName,urlimg,unv,unvimg,description,price,email}=req.body
     })
 
 }
-// async function updateHandler(req, res)
-//  {
-//   const bookId = req.params.id
-//   const {title,description,status,email} = req.body
-//   BookModel.findByIdAndUpdate(bookId,{title,description,status}, (error, result) => 
-//   {
-//     BookModel.find({ email: email }, (error, result) => 
-//     {
-//       if (error) 
-//       {
-//         console.log(error);
-//       }
-//       else
-//        {
-//         res.send(result)
-//         console.log(result);
-//       }
-//     })
-//   })
-// }
+async function updateHandler(req, res)
+ {
+  const CourseId = req.params.id
+  const {price,email} = req.body
+  CourseModel.findByIdAndUpdate(CourseId,{price}, (error, result) => 
+  {
+    CourseModel.find({ email: email }, (error, result) => 
+    {
+      if (error) 
+      {
+        console.log(error);
+      }
+      else
+       {
+        res.send(result)
+        console.log(result);
+      }
+    })
+  })
+}
 
 
 server.listen(PORT, () => {
