@@ -11,6 +11,7 @@ const coursesData=require('./data.json')
 
 let CourseModel;
 const mongoose = require('mongoose');
+const { default: axios } = require('axios');
 
 main().catch(err => console.log(err));
 
@@ -30,38 +31,114 @@ async function main() {
   CourseModel = mongoose.model('courses', courseSchema);
 
 
-//   getData()
+  // getData()
 }
 // let sample;
 // async function getData() {
-//    coursesData.result.map(item=>{
 //   sample=new CourseModel({
-//     courseName: item.courseName,
-//     urlimg: item.urlimg,
+//     courseName: 'hi',
+//     urlimg: 'hello',
 //     unv:item.unv,
 //     unvimg:item.unvimg,
 //     description:item.description,
 //     price:item.price,
-//   })
 // })
 // await sample.save()
 
 // }
+
 // http://localhost:3010/coursesData
 server.get('/coursesData',getDataHandler)
-// server.get('/',Homehandler)
 // http://localhost:3010/updatecourse/:id
 server.put('/updatecourse/:id' ,updateHandler)
 // http://localhost:3010/addcourse
 server.post('/addcourse', addHandler);
-// http://localhost:3010/delete/:id?email=${email}
-// server.delete('/deletecourse/:id',deleteHandler)
+// http://localhost:3010/deletecourse/:id?email=${email}
+server.delete('/deletecourse/:id',deleteHandler)
 // http://localhost:3010/profiledata?email=${email}
 server.get('/profiledata',profileDataHandler)
+// http://localhost:3010/TechCrunch
+server.get('/TechCrunch',techCrunchHandler)
+// http://localhost:3010/Topbusiness
+server.get('/Topbusiness',topbusinessHandler)
+// http://localhost:3010/TeslaArticles
+server.get('/TeslaArticles',teslaArticlesHandler)
 
-// function Homehandler(req,res){
-//     res.send("HomePage");
-// }
+function techCrunchHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let techCrunchData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${Key}`)
+  .then(result=>{
+
+    techCrunchData=result.data.articles.map(item => {
+      return new TechCrunch(item)
+  })
+  res.send(techCrunchData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+
+function TechCrunch(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
+
+function topbusinessHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let topbusinessData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${Key}`)
+  .then(result=>{
+
+    topbusinessData=result.data.articles.map((item) => {
+      return new Topbusiness(item)
+  })
+  res.send(topbusinessData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+function Topbusiness(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
+function teslaArticlesHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let teslaArticlesData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/everything?q=tesla&from=2021-08-20&sortBy=publishedAt&apiKey=${Key}`)
+  .then(result=>{
+
+    teslaArticlesData=result.data.articles.map((item) => {
+      return new TeslaArticles(item)
+  })
+  res.send(teslaArticlesData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+function TeslaArticles(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
+
 
 function profileDataHandler(req,res){
     const email=req.query.email
@@ -83,19 +160,20 @@ function getDataHandler(req,res){
 }
 console.log(coursesData.result);
 
-// function deleteHandler(req,res){
-//     const id = req.params.id;
-//     const email = req.query.email;
-//     .deleteOne({:id},(err,result)=>{
-//         .find({:email},(err,result)=>{
-//            if(err){
-//                console.log("Error in handleDelete");
-//            } else {
-//                res.send(result);
-//            }
-//         })
-//     })
-//     }
+function deleteHandler(req,res){
+    const id = req.params.id;
+    const email = req.query.email;
+    CourseModel.deleteOne({_id:id},(err,result)=>{
+      CourseModel.find({email:email},(err,result)=>{
+           if(err){
+               console.log("Error in handleDelete");
+           } else {
+               res.send(result);
+           }
+        })
+    })
+    }
+
 async function addHandler(req, res) {
     console.log(req.body);
 const{courseName,urlimg,unv,unvimg,description,price,email}=req.body
@@ -124,13 +202,13 @@ async function updateHandler(req, res)
  {
   const CourseId = req.params.id
   const {price,email} = req.body
-  CourseModel.findByIdAndUpdate(CourseId,{price}, (error, result) => 
+  CourseModel.findByIdAndUpdate(CourseId,{price}, (err,result) => 
   {
-    CourseModel.find({ email: email }, (error, result) => 
+    CourseModel.find({ email: email }, (err, result) => 
     {
-      if (error) 
+      if (err) 
       {
-        console.log(error);
+        console.log(err);
       }
       else
        {
