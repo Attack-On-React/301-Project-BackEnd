@@ -11,6 +11,7 @@ const coursesData=require('./data.json')
 
 let CourseModel;
 const mongoose = require('mongoose');
+const { default: axios } = require('axios');
 
 main().catch(err => console.log(err));
 
@@ -45,6 +46,7 @@ async function main() {
 // await sample.save()
 
 // }
+
 // http://localhost:3010/coursesData
 server.get('/coursesData',getDataHandler)
 // http://localhost:3010/updatecourse/:id
@@ -55,7 +57,87 @@ server.post('/addcourse', addHandler);
 server.delete('/deletecourse/:id',deleteHandler)
 // http://localhost:3010/profiledata?email=${email}
 server.get('/profiledata',profileDataHandler)
+// http://localhost:3010/TechCrunch
+server.get('/TechCrunch',techCrunchHandler)
+// http://localhost:3010/Topbusiness
+server.get('/Topbusiness',topbusinessHandler)
+// http://localhost:3010/TeslaArticles
+server.get('/TeslaArticles',teslaArticlesHandler)
 
+function techCrunchHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let techCrunchData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${Key}`)
+  .then(result=>{
+
+    techCrunchData=result.data.articles.map(item => {
+      return new TechCrunch(item)
+  })
+  res.send(techCrunchData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+
+function TechCrunch(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
+
+function topbusinessHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let topbusinessData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${Key}`)
+  .then(result=>{
+
+    topbusinessData=result.data.articles.map((item) => {
+      return new Topbusiness(item)
+  })
+  res.send(topbusinessData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+function Topbusiness(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
+function teslaArticlesHandler(req,res){
+  const Key=process.env.BLOGS_KEY;
+  let teslaArticlesData=[];
+
+  axios
+  .get(`https://newsapi.org/v2/everything?q=tesla&from=2021-08-20&sortBy=publishedAt&apiKey=${Key}`)
+  .then(result=>{
+
+    teslaArticlesData=result.data.articles.map((item) => {
+      return new TeslaArticles(item)
+  })
+  res.send(teslaArticlesData)
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+}
+function TeslaArticles(item){
+  this.title=item.title
+  this.author=item.author
+  this.description=item.description
+  this.url=item.url
+  this.urlToImage=item.urlToImage
+}
 
 
 function profileDataHandler(req,res){
