@@ -30,38 +30,33 @@ async function main() {
   CourseModel = mongoose.model('courses', courseSchema);
 
 
-//   getData()
+  // getData()
 }
 // let sample;
 // async function getData() {
-//    coursesData.result.map(item=>{
 //   sample=new CourseModel({
-//     courseName: item.courseName,
-//     urlimg: item.urlimg,
+//     courseName: 'hi',
+//     urlimg: 'hello',
 //     unv:item.unv,
 //     unvimg:item.unvimg,
 //     description:item.description,
 //     price:item.price,
-//   })
 // })
 // await sample.save()
 
 // }
 // http://localhost:3010/coursesData
 server.get('/coursesData',getDataHandler)
-// server.get('/',Homehandler)
 // http://localhost:3010/updatecourse/:id
 server.put('/updatecourse/:id' ,updateHandler)
 // http://localhost:3010/addcourse
 server.post('/addcourse', addHandler);
-// http://localhost:3010/delete/:id?email=${email}
-// server.delete('/deletecourse/:id',deleteHandler)
+// http://localhost:3010/deletecourse/:id?email=${email}
+server.delete('/deletecourse/:id',deleteHandler)
 // http://localhost:3010/profiledata?email=${email}
 server.get('/profiledata',profileDataHandler)
 
-// function Homehandler(req,res){
-//     res.send("HomePage");
-// }
+
 
 function profileDataHandler(req,res){
     const email=req.query.email
@@ -83,19 +78,20 @@ function getDataHandler(req,res){
 }
 console.log(coursesData.result);
 
-// function deleteHandler(req,res){
-//     const id = req.params.id;
-//     const email = req.query.email;
-//     .deleteOne({:id},(err,result)=>{
-//         .find({:email},(err,result)=>{
-//            if(err){
-//                console.log("Error in handleDelete");
-//            } else {
-//                res.send(result);
-//            }
-//         })
-//     })
-//     }
+function deleteHandler(req,res){
+    const id = req.params.id;
+    const email = req.query.email;
+    CourseModel.deleteOne({_id:id},(err,result)=>{
+      CourseModel.find({email:email},(err,result)=>{
+           if(err){
+               console.log("Error in handleDelete");
+           } else {
+               res.send(result);
+           }
+        })
+    })
+    }
+
 async function addHandler(req, res) {
     console.log(req.body);
 const{courseName,urlimg,unv,unvimg,description,price,email}=req.body
@@ -124,13 +120,13 @@ async function updateHandler(req, res)
  {
   const CourseId = req.params.id
   const {price,email} = req.body
-  CourseModel.findByIdAndUpdate(CourseId,{price}, (error, result) => 
+  CourseModel.findByIdAndUpdate(CourseId,{price}, (err,result) => 
   {
-    CourseModel.find({ email: email }, (error, result) => 
+    CourseModel.find({ email: email }, (err, result) => 
     {
-      if (error) 
+      if (err) 
       {
-        console.log(error);
+        console.log(err);
       }
       else
        {
