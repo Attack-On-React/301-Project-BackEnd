@@ -119,7 +119,7 @@ function teslaArticlesHandler(req,res){
   let teslaArticlesData=[];
 
   axios
-  .get(`https://newsapi.org/v2/everything?q=tesla&from=2021-08-20&sortBy=publishedAt&apiKey=${Key}`)
+  .get(`https://newsapi.org/v2/everything?q=apple&from=2021-09-20&to=2021-09-20&sortBy=popularity&apiKey=${Key}`)
   .then(result=>{
 
     teslaArticlesData=result.data.articles.map((item) => {
