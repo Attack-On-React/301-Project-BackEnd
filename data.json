@@ -63,5 +63,82 @@
         "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/8537d31f-01b4-40fd-b652-e17b38eefe41-7956b2a3cd04.png",
         "description":"This course takes you through the first eight lessons of CS6750: Human-Computer Interaction as taught in the Georgia Tech Online Master of Science in Computer Science program. In this course, you’ll take the first steps toward being a solid HCI practitioner and researcher. You’ll learn the fundamentals of how HCI relates to fields like user experience design, user interface design, human factors engineering, and psychology. You’ll also learn how human-computer interaction has influence across application domains like healthcare and education; technology development like virtual and augmented reality; and broader ideas like context-sensitive computing and information visualization. You’ll then dive into the fundamentals of human-computer interaction. You’ll learn three views of the user’s role in interface design: the behaviorist ‘processor’ view, the cognitivist ‘predictor’ view, and the situationist ‘participant’ view. You’ll discover how these different views of the user’s role affect the scope we use to evaluate interaction. These perspectives will be crucial as you move forward in designing interfaces to ensure you’re considering what goes on inside the user’s head, as well as in the environment around them. You’ll then learn the gulfs of execution and evaluation, which determine how easily the user can accomplish their goals in a system and how well they can understand the results of their actions. All of user interface design can be seen as taking steps to bridge these gulfs. You’ll also investigate the notion of direct manipulation, which shortens the distance between the user and the objects they are manipulating in the interface. With these tools, you’ll be well-equipped to start designing effective interfaces. You’ll then take a deeper dive into what humans are even capable of accomplishing. You’ll learn the limitations of human sensing and memory and how we must be aware of the cognitive load we introduce on the user while using our interfaces. Cognitive load can have an enormous impact on a user’s satisfaction with an interface, and must be kept in mind as you begin your career as a designer.",
         "price":"50$/1 Month"        
+    },{
+        "courseName":"The Art of Persuasive Writing and Speaking",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/941c1967-d0ee-49bc-b3c5-e6ccf4681f2a-14ac60434ff5.small.jpeg",
+        "unv":"HarvardX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png",
+        "description":"We are living in a contentious time in history. Fundamental disagreements on critical policy, economic, and political issues make it essential to learn how to compose an effectiveargument and to analyze the arguments of others. This ability will help you engage in civil discourse and make needed changes in society. Conveying a convincing message can benefit your personal, public, and professional lives. This course is an introduction to the theory and practice of rhetoric, the art of persuasive writing and speech. In it, you will learn to construct and defend compelling arguments, a crucial skill in many settings. We will be using selected speeches from prominent twentieth-century Americans -- including Martin Luther King Jr., John F. Kennedy, Margaret Chase Smith, Ronald Reagan, and more -- to explore and analyze rhetorical structure and style. Through this analysis, you will learn how speakers and writers persuade an audience to adopt their point of view.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Supply Chain Fundamentals",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/324970b7-03a4-44d7-b39e-10bbda6f119f-b056166a861f.small.jpg",
+        "unv":"MITx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/2a73d2ce-c34a-4e08-8223-83bca9d2f01d-2cc8854c6fee.png",
+        "description":"This Supply Chain Fundamentals course is part of the MITx MicroMasters Credential in Supply Chain Management, offered by #1 ranked SCM Master's program at the Massachusetts Institute of Technology. The CTL.SC1x Supply Chain Fundamentals course provides the foundational skills for supply chain management and logistics. You will learn how to develop and apply analytic tools, approaches, and techniques used in the design and operation of logistics systems and integrated supply chains. The material is taught from a managerial perspective, with an emphasis on where and how specific tools can be used to improve the overall performance and reduce the total cost of a supply chain. We place a strong emphasis on the development and use of fundamental mathematical models to illustrate the underlying concepts involved in both intra- and inter-company logistics operations.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Italian Language and Culture Beginner",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/1e170500-f525-46c1-b8b9-c893cf6910d3-641dfb9218ec.small.jpg",
+        "unv":"WellesleyX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/672591a0-3f92-4e31-906c-ea14a2ff92b5-30bfef991443.png",
+        "description":"In this language course you will learn the four basic skills (speaking, listening, reading and writing) in the context of major themes in Italian culture. By the end of the course you will be able to describe people, events and situations, both in the present and the past, and you will have acquired the necessary vocabulary to communicate about everyday situations.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Entrepreneurship in Emerging Economies",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/387c5b5b-ef7f-43b9-b9b5-4163f3c74a49-c7a02a264e7c.small.jpg",
+        "unv":"HarvardX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png",
+        "description":"This business and management course, taught by Harvard Business School professor Tarun Khanna, takes an inter-disciplinary approach to understanding and solving complex social problems. You will learn about prior attempts to address these problems across the emerging markets, identify points of opportunity for smart entrepreneurial efforts, and propose and develop your own creative solutions. The focus of this course is on individual agency—what can you do to address a defined problem? The creative process starts with immersion in the problem-at-hand and the harnessing of diverse perspectives. The course then touches on issues related to financing, scaling up of operations, branding, the management of property rights, and the creation of appropriate metrics for assessing progress and social value, in the fast-growing but institutionally compromised settings of emerging markets. The settings are diverse, sectoral (healthcare, online commerce, fintech, infrastructure) and geographic (India and South Asia, China, Africa, Latin America). But the emphasis is less on comprehensive coverage than on developing a way of thinking with a bias-to-action.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"The Psychology of Criminal Justice",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/479e2d74-9414-4939-9e52-937cf1685720-d9059a4a1186.small.jpg",
+        "unv":"UQx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/8554749f-b920-4d7f-8986-af6bb95290aa-f336c6a2ca11.png",
+        "description":"This course systematically explores the effectiveness of the law and justice system from a psychological perspective. By experiencing a fictional case first hand, you will learn about the psychology of law and some of the misconceptions commonly held about criminal justice.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Accounting and Finance",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/a0cb0f4f-21d9-4a0a-8386-d1f8e648b526-0a4bba343d7b.small.jpg",
+        "unv":"IIBMx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/c2e6b3f5-9c1f-41f0-b692-f2173d05a256-7729f0b9d72b.png",
+        "description":"This business course helps you to read and understand financial statements to evaluate how business performance is affected by four fundamental drivers of profitability viz., asset management, cost management, leverage management and tax management. It will also help you to identify areas for improvement. The second part of this finance course deals with managing costs. You will learn how to prepare cost sheets, budget and make cost-based decisions. The third part of the course provides an overview of financial markets to raise capital of different types. You will develop the ability to prepare and evaluate finances for your business plan and manage working capital. The overall objective of the course is to build financial acumen to make you a successful entrepreneur or manager.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"How to Write an Essay",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/cb5cc730-9600-4909-a4b6-abef7a5e2647-8d65bb5f26cb.small.jpg",
+        "unv":"BerkeleyX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/54bc81cb-b736-4505-aa51-dd2b18c61d84-2082c7ba1024.png",
+        "description":"College Writing 2.1x is an introduction to academic writing for English Language Learners, focusing on essay development, grammatical correctness, and self-editing. The five-week course includes a review of basic grammar terminology and understanding; writing effective sentences and paragraphs; introductions and conclusions; strategies for writing longer texts; and thesis statements. The course materials will be offered via readings and videos. An optional course workbook, in ebook form, may be used for additional writing work. Students will participate in online discussions as well as peer review. Students will complete an essay for this part of the course.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Taxes and Decision Making",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/6802551c-71af-4552-9cf2-64ba8592165b-e295bba17250.small.jpeg",
+        "unv":"IUx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/8946fb40-f288-4e05-9275-9e9b4689bda8-e58c545e2296.png",
+        "description":"Build your accounting foundation with this course on U.S. federal income taxation. You’ll learn about the taxation of both businesses and individuals. In addition to income tax laws, you’ll discover how to reduce the present value of income taxes. Topics will include tax planning strategies, qualified business income deduction, tax compliance, and more. Verified Learners will need to purchase a textbook in order to successfully complete the course. See the FAQ for details.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"A Hands-on Introduction to Engineering Simulations",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/90a15103-767d-42ca-ba2f-6f4c892d6f4c-2222edeb0de6.small.jpg",
+        "unv":"Cornellx",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/99661642-a500-4988-bd1b-97877bd6e232-6903c8a95279.png",
+        "description":"In this hands-on course, you'll learn how to perform engineering simulations using a powerful tool from ANSYS, Inc. This is a problem-based course where you'll learn by doing. The focus will be on understanding what's under the blackbox so as to move beyond garbage-in, garbage-out. You'll practice using a common solution approach to problems involving different physics: structural mechanics, fluid dynamics and heat transfer. We'll solve textbook examples to understand the fundamental principles of finite-element analysis and computational fluid dynamics. Then we'll apply these principles to simulate real-world examples in the tool including a bolted rocket assembly and a wind turbine rotor.We'll discuss current industry practices with a SpaceX engineer. By working through examples in a leading simulation tool that professionals use, you'll learn to move beyond button pushing and start thinking like an expert.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Data Analytics Basics for Everyone",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/5c90d49e-e57d-4789-a729-334980458fe0-cc522b69c4f7.small.jpeg",
+        "unv":"IBM",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/87b07564-d569-4cfd-bee6-8b0a407acb73-dc33e4b5f353.png",
+        "description":"Please Note: Learners who successfully complete this IBM course can earn a skill badge —a detailed, verifiable and digital credential that profiles the knowledge and skills you’ve acquired in this course. Enroll to learn more, complete the course and claim your badge! In this course, you will learn about the various components of a modern data ecosystem and the role Data Analysts, Data Scientists, and Data Engineers play in this ecosystem. You will gain an understanding of data structures, file formats, sources of data, and data repositories. You will understand what Big Data is and the features and uses of some of the Big Data processing tools. This course will introduce you to the key tasks a Data Analyst performs in a typical day. This includes how they identify, gather, wrangle, mine and analyze data, and finally communicate their findings to different stakeholders impactfully. You will be introduced to some of the tools Data Analysts use for each of these tasks.",
+        "price":"50$/1 Month"        
+    },{
+        "courseName":"Solar Energy: Photovoltaic (PV) Energy Conversion",
+        "urlimg":"https://prod-discovery.edx-cdn.org/media/course/image/82e5c3a1-7d19-44d8-bbbc-f3cda6691a64-78c134e01e06.small.jpg",
+        "unv":"DelftX",
+        "unvimg":"https://prod-discovery.edx-cdn.org/organization/logos/c484a523-d396-4aff-90f4-bb7e82e16bf6-f9e6cc4a4c94.png",
+        "description":"The key factor in getting more efficient and cheaper solar energy panels is the advance in the development of photovoltaic cells. In this course you will learn how photovoltaic cells convert solar energy into useable electricity. You will also discover how to tackle potential loss mechanisms in solar cells. By understanding the semiconductor physics and optics involved, you will develop in-depth knowledge of how a photovoltaic cell works under different conditions. You will learn how to model all aspects of a working solar cell. For engineers and scientists working in the photovoltaic industry, this course is an absolute must to understand the opportunities for solar cell innovation. This course is part of the Solar Energy Engineering MicroMasters Program designed to cover all physics and engineering aspects of photovoltaics: photovoltaic energy conversion, technologies and systems. We recommend that you complete this course prior to taking the other courses in this MicroMasters program.",
+        "price":"50$/1 Month"        
     }
 ]}
